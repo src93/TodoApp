@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace 'com.cursokotlin.todoapp'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.cursokotlin.todoapp"
         minSdk 27
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -69,12 +69,12 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     implementation("androidx.compose.runtime:runtime-livedata:1.2.1")
 
-    runtimeOnly("androidx.room:room-runtime:2.6.0")
-    implementation("androidx.room:room-compiler:2.6.0")
-    runtimeOnly("androidx.room:room-ktx:2.6.0")
+    implementation("androidx.room:room-runtime:2.6.0")
+    kapt("androidx.room:room-compiler:2.6.0")
+    implementation("androidx.room:room-ktx:2.6.0")
 }
 
 // Allow references to generated code
